@@ -1,22 +1,25 @@
+---
+import "../styles/global.css";
+
+const { showBackToIndex } = Astro.props;
+---
+
 <!doctype html>
-<html lang="en">
+<html lang="en" class="h-full w-full m-0 text-gray-600">
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
-		<title>Astro Basics</title>
+		<title>FrontendMentors - Challenges</title>
 	</head>
-	<body>
-		<slot />
+	<body class="h-full w-full m-0 flex flex-col justify-between">
+    <div class="w-11/12 mx-auto">
+      { showBackToIndex && <a href="/" class="block absolute top-3 w-fit hover:text-teal-500 hover:underline">&larr; Back to index</a> }
+      <slot />
+    </div>
+    <footer class="border-t border-gray-300 w-11/12 mx-auto h-24 flex justify-center items-center">
+      <span>&copy; 2025, Eduardo Torres Dávila</span>
+    </footer>
 	</body>
 </html>
-
-<style>
-	html,
-	body {
-		margin: 0;
-		width: 100%;
-		height: 100%;
-	}
-</style>
