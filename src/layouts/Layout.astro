@@ -15,7 +15,7 @@ const { showBackToIndex } = Astro.props;
 	</head>
 	<body class="h-full w-full m-0 flex flex-col justify-between">
     <div class="w-11/12 mx-auto">
-      { showBackToIndex && <a href="./" class="block absolute top-3 w-fit hover:text-teal-500 hover:underline">&larr; Back to index</a> }
+      { showBackToIndex && <a href="/" class="block absolute top-3 w-fit hover:text-teal-500 hover:underline">&larr; Back to index</a> }
       <slot />
     </div>
     <footer class="border-t border-gray-300 w-11/12 mx-auto h-24 flex justify-center items-center">
