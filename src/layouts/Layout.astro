@@ -1,7 +1,7 @@
 ---
 import "../styles/global.css";
 
-const { showBackToIndex } = Astro.props;
+const { showBackToIndex, title } = Astro.props;
 ---
 
 <!doctype html>
@@ -11,10 +11,10 @@ const { showBackToIndex } = Astro.props;
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
-		<title>FrontendMentors - Challenges</title>
+    <title>{ title }</title>
 	</head>
-	<body class="h-full w-full m-0 flex flex-col justify-between">
-    <div class="w-11/12 mx-auto">
+	<body class="h-full w-full m-0">
+    <div class="mx-auto p-12">
       { showBackToIndex && <a href="/FrontendMentors/" class="block absolute top-3 w-fit hover:text-teal-500 hover:underline">&larr; Back to index</a> }
       <slot />
     </div>
