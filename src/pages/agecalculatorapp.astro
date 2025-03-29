@@ -2,8 +2,22 @@
 import Layout from '../layouts/Layout.astro';
 ---
 
+<style>
+  @layer base {
+    input[type=number].appearance-none::-webkit-inner-spin-button,
+    input[type=number].appearance-none::-webkit-outer-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+    }
+    input[type=number].appearance-none {
+      -moz-appearance:textfield;
+    }
+  }
+</style>
+
 <Layout showBackToIndex="true" title="Age calculator app">
-  <div class="bg-zinc-200 font-poppins py-20">
+  <h1 class="text-4xl">Age Calculator App</h1>
+  <div class="bg-zinc-200 font-poppins py-20 mt-6">
     <div class="bg-white pt-20 sm:p-10 p-5 rounded-br-[4rem] sm:rounded-br-[10rem] rounded-xl w-fit m-auto">
       <form id="birth-form">
         <div class="flex flex-row gap-5 sm:mb-5 mb-10 tracking-widest font-bold sm:mr-24">
@@ -26,7 +40,7 @@ import Layout from '../layouts/Layout.astro';
         <div class="relative">
           <hr class="border-t border-t-gray-200">
           <button class="sm:w-16 sm:h-16 w-12 h-12 bg-purple-600 rounded-full absolute -translate-y-1/2 translate-x-1/2 sm:translate-x-0 sm:right-0 flex items-center justify-center hover:bg-black cursor-pointer right-1/2">
-            <img src="/FrontendMentors/icon-arrow.svg" class="sm:w-8 w-5"/>
+            <img src="/FrontendMentors/icons/icon-arrow.svg" class="sm:w-8 w-5"/>
           </button>
         </div>
       </form>
